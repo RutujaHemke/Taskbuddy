@@ -33,14 +33,16 @@ function App() {
   return (
     
 
-    <div>
+    <div id="container">
       <h1>Task Buddy</h1>
       <p>Our friendlly Task Manager</p> 
+      <div id="box">
       <Taskform addTask={addTask}/>
       <Tasklist tasks={tasks}
         updateTask={updateTask}  deleteTask={deleteTask}/>
       <Progresstracker tasks={tasks}/>
-      <button onClick={clearTasks}>Clear all task</button>
+      <button onClick={clearTasks} className="clear-btn">Clear all task</button>
+      </div>
     </div>
   )
 }

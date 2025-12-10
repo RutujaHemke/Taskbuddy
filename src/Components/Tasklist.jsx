@@ -10,7 +10,7 @@ export default function Tasklist({tasks, updateTask, deleteTask}) {
         <ul className="task-list">
             <li>Task List</li>
             {tasks.map((task, index) => (
-                <li key={index} className={task.completed ? "completed" : ""}>
+            <li key={index} className={task.completed ? "completed" : ""}>
                 <div>
                     <span>{task.text}
                         <small>({task.priority} , {task.category})</small>
@@ -23,7 +23,7 @@ export default function Tasklist({tasks, updateTask, deleteTask}) {
                     <button onClick={() => deleteTask(index)}>Delete</button>
                 </div>
             </li>
-            ))}; 
+            ))}
         </ul>
     )
 }
